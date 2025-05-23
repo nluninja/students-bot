@@ -1,4 +1,4 @@
-# StudensBot
+# StudentsBot
 
 Questo progetto consiste in due script Python principali:
 

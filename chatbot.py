@@ -121,7 +121,7 @@ def create_rag_chain(vectorstore):
 
 def main_chat():
     """Funzione principale per avviare il chatbot."""
-    print("Inizializzazione del chatbot RAG Unicatt...")
+    print("Inizializzazione di StudentsBot...")
 
     # Chiedi se ricreare l'indice
     recreate_choice = input(f"Vuoi ricreare l'indice da '{MARKDOWN_DIR}'? (s/N): ").lower()
