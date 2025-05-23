@@ -1,0 +1,35 @@
+###Students Bot
+
+
+# Crawler Unicatt Markdown
+
+Questo script Python (`crawler.py`) è un semplice web crawler progettato per scaricare contenuti dal sito `https://studenticattolica.unicatt.it/`. Segue i link interni al dominio fino a una profondità specificata e salva il contenuto principale di ogni pagina come file Markdown.
+
+## Caratteristiche Principali
+
+*   **Download Pagine Web:** Utilizza la libreria `requests` per scaricare il contenuto HTML delle pagine.
+*   **Parsing HTML:** Utilizza `BeautifulSoup4` per analizzare l'HTML, estrarre il contenuto testuale rilevante e i link.
+*   **Conversione in Markdown:** Utilizza `markdownify` per convertire la porzione HTML selezionata (idealmente il contenuto principale della pagina) in formato Markdown.
+*   **Limite di Profondità:** Il crawler esplora i link fino a una profondità massima configurabile (default: 10) a partire dall'URL iniziale.
+*   **Restrizione del Dominio:** Il crawler rimane confinato al dominio specificato (`studenticattolica.unicatt.it`) e non segue link esterni.
+*   **Gestione URL Visitati:** Tiene traccia degli URL già visitati per evitare cicli e download ripetuti.
+*   **Salvataggio dei File:** I contenuti Markdown vengono salvati in una directory `output_markdown`. I nomi dei file sono generati in modo sicuro a partire dal percorso dell'URL.
+*   **User-Agent Personalizzato:** Imposta un User-Agent per identificare il crawler.
+*   **Ritardo tra Richieste:** Include un ritardo configurabile tra le richieste HTTP per essere "gentile" con il server web.
+*   **Gestione Errori Base:** Include una gestione basilare per errori di rete e HTTP.
+*   **Logging:** Fornisce informazioni sull'avanzamento e su eventuali errori tramite il modulo `logging`.
+
+## Prerequisiti
+
+Prima di eseguire lo script, assicurati di avere Python installato (consigliato Python 3.6+) e le seguenti librerie:
+
+*   `requests`
+*   `beautifulsoup4`
+*   `markdownify`
+
+## Installazione
+
+Puoi installare le dipendenze necessarie usando pip:
+
+```bash
+pip install requests beautifulsoup4 markdownify
